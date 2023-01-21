@@ -46,15 +46,17 @@ public class Test {
         driver.switchTo().parentFrame();
 
         driver.findElement(By.id("postcode")).sendKeys("CR05UW");
+        driver.findElement(By.id("fake-legend")).click();
         Select distanceDropdown = new Select(driver.findElement(By.id("distance")));
-        distanceDropdown.selectByValue("1");
+        distanceDropdown.selectByIndex(2);
+        driver.findElement(By.id("fake-legend")).click();
         Select makeDropdown = new Select(driver.findElement(By.id("make")));
         makeDropdown.selectByValue("BMW");
+        driver.findElement(By.id("fake-legend")).click();
         Select modelDropdown = new Select(driver.findElement(By.id("model")));
         modelDropdown.selectByValue("3 Series");
         driver.findElement(By.className("atds-hero__search-button")).click();
         driver.quit();
-
     }
 
 
