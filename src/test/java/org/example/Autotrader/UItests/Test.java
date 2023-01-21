@@ -30,7 +30,6 @@ public class Test {
         String title = "Auto Trader UK - New and Used Cars For Sale";
         Assert.assertEquals(title,driver.getTitle());
         driver.quit();
-
     }
 
     @org.junit.Test
